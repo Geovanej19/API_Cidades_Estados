@@ -117,7 +117,7 @@ app.get('/v1/senai/estados', function(request, response){
 })
 
 app.get('/', function(request, response){
-    response.redirect('/v1/senai/estados')
+    response.redirect('/v1/senai/help')
 
 })
 
