@@ -116,6 +116,11 @@ app.get('/v1/senai/estados', function(request, response){
     response.json(estados)
 })
 
+app.get('/', function(request, response){
+    response.redirect('/v1/senai/estados')
+
+})
+
 
 app.get('/v1/senai/help', function(request, response){
     let docAPI = {
