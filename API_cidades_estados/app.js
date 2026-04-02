@@ -38,7 +38,7 @@ app.use(cors(corsOptions))
 //Request -> São chegadas de dados na API
 
 
-const estadosCidades = require('./modulo/funtion.js')
+const estadosCidades = require('./modulo/function.js')
 
 
 
@@ -116,10 +116,6 @@ app.get('/v1/senai/estados', function(request, response){
     response.json(estados)
 })
 
-//Server para Inicializar a API para receber requisições
-app.listen(8080, function(){
-    console.log('API funcionando e aguardando novas requisições...');  
-})
 
 app.get('/v1/senai/help', function(request, response){
     let docAPI = {
@@ -157,4 +153,10 @@ app.get('/v1/senai/help', function(request, response){
     }
     response.status(200)
     response.json(docAPI)
+})
+
+const PORT = process.env.PORT || 8080
+
+app.listen(PORT, function(){
+    console.log(`API funcionando na porta ${PORT}`)
 })
