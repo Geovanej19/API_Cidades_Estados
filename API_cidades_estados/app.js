@@ -38,7 +38,7 @@ app.use(cors(corsOptions))
 //Request -> São chegadas de dados na API
 
 
-const estadosCidades = require('./Modulo/funcoes.js')
+const estadosCidades = require('./modulo/funtion.js')
 
 
 
